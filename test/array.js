@@ -31,4 +31,9 @@ describe('Array', function () {
 			assert.deepStrictEqual(array, [1])
 		})
 	})
+	describe('_.difference()', function () {
+		it('should difference', function () {
+			assert.deepStrictEqual(_.difference([2, 1], [2, 3]), [1])
+		})
+	})
 })
