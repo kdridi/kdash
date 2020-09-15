@@ -1,6 +1,5 @@
-const difference = (array) => (values) => values.reduce((r, a) => r.filter((x) => a.includes(x) === false), array)
+const difference = (array) => (values) => array.filter((x) => values.includes(x) === false)
 
-module.exports = (...values) => {
-	const array = values.shift()
+module.exports = (array, values) => {
 	return difference(array)(values)
 }
