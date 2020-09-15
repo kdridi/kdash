@@ -4,7 +4,8 @@
   "description": "lodash clone for educational purpose",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha",
+    "watch": "mocha --watch"
   },
   "repository": {
     "type": "git",
@@ -18,5 +19,8 @@
   "bugs": {
     "url": "https://github.com/kdridi/kdash/issues"
   },
-  "homepage": "https://github.com/kdridi/kdash#readme"
+  "homepage": "https://github.com/kdridi/kdash#readme",
+  "devDependencies": {
+    "mocha": "^8.1.3"
+  }
 }
