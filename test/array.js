@@ -36,4 +36,15 @@ describe('Array', function () {
 			assert.deepStrictEqual(_.difference([2, 1], [2, 3]), [1])
 		})
 	})
+	describe('_.differenceBy()', function () {
+		it('should differenceBy with given function', function () {
+			assert.deepStrictEqual(_.differenceBy([2.1, 1.2], [2.3, 3.4], Math.floor), [1.2])
+		})
+		it('should differenceBy with no given function', function () {
+			assert.deepStrictEqual(_.differenceBy([2.1, 1.2], [2.1, 3.4]), [1.2])
+		})
+		it('should differenceBy with property', function () {
+			assert.deepStrictEqual(_.differenceBy([{ x: 2 }, { x: 1 }], [{ x: 1 }], 'x'), [{ x: 2 }])
+		})
+	})
 })
