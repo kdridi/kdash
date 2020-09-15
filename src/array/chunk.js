@@ -4,8 +4,6 @@ const chunk = (array) => (size) =>
 		.filter(({ idx }) => idx % size === 0)
 		.map(({ res }) => res)
 
-module.exports = (...args) => {
-	const array = args.shift()
-	const size = args.shift() || 1
+module.exports = (array, size = 1) => {
 	return chunk(array)(size)
 }
